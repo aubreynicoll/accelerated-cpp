@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdexcept>
 #include <vector>
 
 #include "average.h"
@@ -10,10 +9,7 @@ using namespace std;
 int main() {
   vector<double> nums;
 
-  while (read_numbers(cin, nums))
-    ;
-
-  if (nums.size() == 0) throw domain_error("average of empty set");
+  read_numbers(cin, nums);
 
   cout << average(nums) << endl;
 
